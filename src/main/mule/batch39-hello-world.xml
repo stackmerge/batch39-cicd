@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="batch39-hello-worldFlow" doc:id="b8b9c0a5-d28d-40da-8f7f-8f6a0646b617" >
 		<http:listener doc:name="Listener" doc:id="a55e84ac-d53b-4637-9c91-1b6b19e8bd7e" config-ref="HTTP_Listener_config" path="/cicd"/>
-		<set-payload value="#['Hello World!!']" doc:name="Set Payload" doc:id="df09c6ce-cbd1-4feb-b72e-7504c507e96c" />
+		<set-payload value="#['Hello from Batch 39']" doc:name="Set Payload" doc:id="df09c6ce-cbd1-4feb-b72e-7504c507e96c" />
 	</flow>
 </mule>
