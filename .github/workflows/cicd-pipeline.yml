@@ -1,0 +1,21 @@
+name: CloudHub 1.0 Deployment using Maven
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  buildAndDeploy:
+    env:
+      CP_CLIENT_ID: ${{secrets.CP_CLIENT_ID}}
+      CP_CLIENT_SECRET: ${{secrets.CP_SECRET}}
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code 
+      uses: actions/checkout@v3
+      
+    - name: Build and deploy to ch1.0 with Maven
+      run: mvn -B clean deploy -DmuleDeploy --file pom.xml
+
