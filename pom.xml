@@ -43,8 +43,10 @@
 						<workers>1</workers>
 						<workerType>MICRO</workerType>
 						<objectStoreV2>true</objectStoreV2>
+						<skipDeploymentVerification>true</skipDeploymentVerification>
 						<properties>
 							<http.port>8081</http.port>
+							<https.port>8082</https.port>
 						</properties>
 					</cloudHubDeployment>
 				</configuration>
